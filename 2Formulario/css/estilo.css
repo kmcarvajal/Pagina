@@ -1,0 +1,57 @@
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: 'VERDANA';
+}
+#fondo{
+  max-width: 890px;
+	margin: 1% auto;
+	align-content: center;
+}
+#fondo2{
+  max-width: 500px;
+	margin: 1% auto;
+	align-content: center;
+}
+header{
+  color: white;
+  background-color: #5b7989;
+  border-radius: 5px 5px 0px 0px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+header h2{
+  text-align: left;
+  text-shadow: 2px 2px 2px #02010a;
+  width: 50%;
+  padding-left: 2%;
+}
+navbar{
+  text-align: right;
+  width: 80%;
+  padding-right: 2%;
+}
+#contenido{
+  color: black;
+  background-color: #82c3a6;
+  border-radius: 0 0 0px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+footer{
+  color: black;
+  background-color: #C6d5c5;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+#imprimir{
+  color: white;
+  background-color: #5b7989;
+  border-radius: 5px 5px 0px 0px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}

@@ -1,0 +1,118 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(2, 1, 10);
+  font-family: 'VERDANA';
+}
+#contenido {
+  max-width: 900px;
+	margin: 1% auto;
+	align-content: center;
+}
+header{
+  color: white;
+  background-color: #5b7989;
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+header h1{
+  text-align: left;
+  text-shadow: 2px 2px 2px #02010a;
+  width: 50%;
+  padding-left: 2%;
+}
+navbar{
+  text-align: right;
+  width: 50%;
+  padding-right: 2%;
+}
+#paginaactual{
+  text-decoration: none;
+}
+section {
+  display: flex;
+  flex-flow: row wrap;
+}
+section img{
+    display: block;
+   margin: 0 auto;
+}
+#imagencentral{
+  align-content: center;
+  background-color: #82c3a6;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  width: 100%;
+}
+#imagensecundaria {
+  background-color: #d5c75f;
+  width: 100%;
+}
+#ImagenSecundaria a{
+  box-shadow: 2px 2px 2px #82c3a6;
+}
+#paisajes, #retratos {
+  width: 50%;
+  text-align: center;
+  padding: 15px;
+}
+#paisajes img, #retratos img {
+  border: 1px solid black;
+  transition: transform 2s;
+}
+#paisajes img:hover{
+  transform: rotate(10deg);
+}
+#retratos img:hover{
+  transform: translate(20px,-5px);
+}
+img[src$=jpg] {
+  box-shadow: 2px 2px 2px #02010a;
+	-webkit-filter:box-shadow: 2px 2px 2px #02010a;
+}
+
+footer{
+  color: black;
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.contacto, .terminos, .redes, .derechos {
+    width: 25%;
+    padding: 20px;
+}
+#galeria {
+  width: 100%;
+  background-color: #d5c75f;
+  display: flex;
+  flex-flow: row wrap;
+}
+#M1, #M2, #M3, #M4, #M5, #M6{
+  width: 33.3%;
+  height: 33.3%;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+}
+#imagen1, #retrato1{
+  -webkit-filter:blur(10px);
+  filter: blur(10px);
+}
+#imagen2, #imagen4, #imagen6, #retrato2, #retrato4, #retrato6{
+  -webkit-filter:grayscale(100%);
+  filter: grayscale(100%);
+}
+#imagen3, #retrato3{
+  -webkit-filter:sepia(90%);
+  filter: sepia(90%);
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="css/estilo.css">
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device=width, user-scalable=no">
+      <script src="jquery/jquery-1.6.3.min.js"></script>
+        <title>Resgistro</title>
+
+    </head>
+    <body>
+      <div id="fondo">
+
+      <form autocomplete="off" action="Formulario.php" method="post" name="formulario" onsubmit="return ValidarFormulario();">
+        <fieldset>
+        <header>
+          <legend><h2>Registrate!</h2></legend>
+          <navbar>
+            <a href="../1Principal/index.html">Inicio</a>
+            <a href="Login.html">Iniciar sesión</a>
+          </navbar>
+        </header>
+        <section id="contenido">
+          <p>
+          <label for="Nombre"><strong>Nombre:</strong></label>
+          <input type="text" id="nombre" name="nombre" value="" maxlength="15" autofocus="autofocus" placeholder="Ej: luis" required>                 &nbsp;&nbsp;&nbsp;
+          <label for="Apellido"><strong>Apellido:</strong></label>
+          <input type="text" id="apellido" name="apellido" value="" maxlength="15" autofocus="autofocus" placeholder="Ej: Quintero" required>
+          </p>
+          <p>
+          <label for="Tipo De Documento"><strong>Tipo De Documento:</strong></label>
+          <select id="tdocumento" name="tdocumento" value="">
+            <option>TI</option>
+            <option>CC</option>
+            <option>CE</option>
+          </select>                                                                                                                     &nbsp;&nbsp;&nbsp;
+          <label for="Número De Documento"><strong>Número De Documento:</strong></label>
+          <input type="number" id="ndocumento" name="ndocumento" value="" maxlength="12" autofocus="autofocus" placeholder="Ej: 1050782170" required>
+          </p>
+          <p>
+          <label for="Fecha De Nacimiento"><strong>Fecha De Nacimiento:</strong></label>
+          <input type="date" id="fecha" name="fecha" value="" required>                                                                              &nbsp;&nbsp;&nbsp;
+          <label for="Edad"><strong>Edad:</strong></label>
+          <input type="number" id="edad" name="edad" value="" placeholder="Ej: 21" required>
+          </p>
+          <p>
+          <label for="Contacto"><strong>Contacto:</strong></label>
+          <label><input type="radio" name="contacto" value="telefono"><small><small>Telefono</small></small></label>
+          <label><input type="radio" name="contacto" value="celular"><small><small>Celular</small></small></label>                      &nbsp;&nbsp;&nbsp;
+          <label for="Número De Contacto"><strong>Número De Contacto:</strong></label>
+          <input type="number" id="ncontacto" name="ncontacto" value="" maxlength="10" autofocus="autofocus" placeholder="Ej: 3208075250" required>
+          </p>
+          <p>
+          <label for="Contraseña"><strong>Contraseña:</strong></label>
+          <input type="password" id="contrasena" name="contrasena" value="" maxlength="8" autofocus="autofocus" placeholder="Ej: Seguridad!" required>    &nbsp;&nbsp;&nbsp;
+          <label for="Confirmar Contraseña"><strong>Confirmar Contraseña:</strong></label>
+          <input type="password" id="ccontrasena" name="ccontrasena" value="" maxlength="8" autofocus="autofocus" placeholder="Ej: Seguridad!" required>
+          </p>
+        </section>
+        <footer>
+          <p>
+          <input type="submit" name="enviar" id="enviar" value="Enviar">
+          </p>
+        </footer>
+        </fieldset>
+      </form>
+      <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+      <script type="text/javascript">
+      $("#fecha").change(function()
+      {
+        var edad = calculaEdad($("#fecha").val())
+        $("#edad").val(edad);
+      });
+      function calculaEdad(fecha)
+      {
+        var fec = new Date(fecha);
+        var hoy = new Date();
+        var edad = parseInt((hoy-fec)/365/24/60/60/1000);
+        return edad;
+      }
+      </script>
+      <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+      <script type="text/javascript">
+      function ValidarFormulario()
+      {
+        if ($("#contrasena").val() != $("#ccontrasena").val())
+        {alert("Las contraseñas no coinciden!");
+        return false;}
+        return true;
+      }
+      </script>
+      <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+    </div>
+    </body>
+
+</html>

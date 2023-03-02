@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="css/estilo.css">
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device=width, user-scalable=no">
+      <script src="jquery/jquery-1.6.3.min.js"></script>
+        <title>Login</title>
+
+    </head>
+    <body>
+      <div id="fondo2">
+
+      <form autocomplete="off" name="login" METHOD="post" action="Login.php">
+        <fieldset>
+        <header>
+          <legend><h2>Login</h2></legend>
+          <navbar>
+            <a href="../1Principal/index.html">Inicio</a>
+            <a href="Formulario.html">Registrate</a>
+          </navbar>
+        </header>
+        <section id="contenido">
+          <p>
+          <label for="Número De Documento"><strong>Número De Documento:</strong></label>
+          <input type="text" id="ndocumento" name="ndocumento"  maxlength="12" autofocus="autofocus" placeholder="Ej: 1050782170" required>
+          </br></br>
+          <label for="Contraseña"><strong>Contraseña:</strong></label>
+          <input type="password" id="contrasena" name="contrasena" maxlength="8" autofocus="autofocus" placeholder="Ej: Seguridad!" required>
+          </p>
+        </section>
+        <footer>
+          <p>
+          <input type="submit" id="enviar" value="Entrar">
+          </p>
+        </footer>
+        </fieldset>
+      </form>
+
+    </div>
+    </body>
+
+</html>
