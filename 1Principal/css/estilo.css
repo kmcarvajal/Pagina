@@ -51,6 +51,9 @@ section img{
   padding-left: 30px;
   width: 100%;
 }
+#imgcentral{
+  width: inherit;
+}
 #imagensecundaria {
   background-color: #d5c75f;
   width: 100%;
